@@ -11,14 +11,9 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("/api/holler/v0")
 public class UserController {
-    private final UserService userService;
 
     @Autowired
-    public UserController(UserService userService)
-    {
-        this.userService = userService;
-    }
-
+    private UserService userService;
 
     @RequestMapping(value = "/users",method = RequestMethod.POST)
     @ResponseBody
